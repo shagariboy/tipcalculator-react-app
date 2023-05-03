@@ -42,6 +42,15 @@ class TipCalculator extends Component {
             <label htmlFor="people">Number of People</label>
             <div className="error-note">Can't be zero</div>
           </div>
+
+          <input
+            className="people-input"
+            type="text"
+            name="people"
+            id="people"
+            placeholder="1"
+          />
+
         </div>
       </div>
     );
