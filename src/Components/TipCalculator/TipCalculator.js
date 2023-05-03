@@ -1,7 +1,19 @@
 import { Component } from "react";
-import "./TipCalculator.css"
+import "./TipCalculator.css";
+import anime from "animejs/lib/anime.es.js";
 
 class TipCalculator extends Component {
+    componentDidMount() {
+        const input = document.getElementById("tip");
+
+        input.addEventListener("focus", () => {
+            anime({
+                targets: input,
+                scale: [{ value: 1.1, duration: 300 }, { value: 1, duration: 300 }],
+                easing: "easeInOutQuad",
+            });
+        });
+    }
     render() {
         return (
             <div className="tip-calculator">
