@@ -22,13 +22,13 @@ function App() {
       <div className="calc-container">
         <div className="partOne">
           <BillContainer />
-        
+          <TipCalculator />
         </div>
         <div className="partTwo">
           <Result />
         </div>
       </div>
-      <TipCalculator />
+      
 
     </div>
   );
