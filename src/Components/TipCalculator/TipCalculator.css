@@ -1,3 +1,33 @@
+
+/* CSS Reset */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* End of CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.tip-calculator {
+    background-color: white;
+    width: 100%;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3.5rem;
+}
+
+
 .label-wrapper {
   display: flex;
   align-items: center;
@@ -23,6 +53,7 @@
   opacity: 1;
 }
 
+
 .input-text,
 .people-input {
   background-color: #f4fafa;
@@ -41,6 +72,19 @@
   background-image: url(../../images/icon-person.svg);
   background-repeat: no-repeat;
   background-position: 10px 50%;
+}
+.input-text {
+    background-color: #f4fafa;
+    border: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-family: "Space Mono", monospace;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: right;
+    color: #00494d;
+    padding: 0.5rem 2.4rem;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .input-text:focus {
@@ -106,6 +150,13 @@ input::placeholder {
 }
 
 .show-error-note {
+
   transition: opacity 1s ease-in-out;
   opacity: 1;
 }
+
+
+.scale {
+    transform-origin: center;
+}
+

@@ -1,7 +1,22 @@
 import { Component } from "react";
 import "./TipCalculator.css";
+import anime from "animejs/lib/anime.es.js";
 
 class TipCalculator extends Component {
+  componentDidMount() {
+    const input = document.getElementById("tip");
+
+    input.addEventListener("focus", () => {
+      anime({
+        targets: input,
+        scale: [
+          { value: 1.1, duration: 300 },
+          { value: 1, duration: 300 },
+        ],
+        easing: "easeInOutQuad",
+      });
+    });
+  }
   render() {
     return (
       <div className="tip-calculator">
@@ -27,6 +42,7 @@ class TipCalculator extends Component {
             <label htmlFor="people">Number of People</label>
             <div className="error-note">Can't be zero</div>
           </div>
+
           <input
             className="people-input"
             type="text"
@@ -34,6 +50,7 @@ class TipCalculator extends Component {
             id="people"
             placeholder="1"
           />
+
         </div>
       </div>
     );
